@@ -1,0 +1,12 @@
+CpG.gene.map.for.DEG
+cov.M
+cov.expr
+cov.protein
+mean.M
+mean.expr
+mean.expr.with.mapped.protein
+mean.protein
+methyl.gene.level.mean
+protein.gene.map.for.DEP
+rho.expr.protein
+rho.methyl.expr
