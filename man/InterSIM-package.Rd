@@ -5,7 +5,7 @@
 Simulation of inter-related genomic datasets 
 }
 \description{
-InterSIM is an R package that generates three inter-related genomic datasets : methylation, gene expression and protein expression.
+InterSIM is an R package that generates three inter-related data set with realistic inter- and intra- relationships based on the DNA methylation, mRNA expression and protein expression from the TCGA ovarian cancer study.
 }
 \details{
 \tabular{ll}{
@@ -18,12 +18,5 @@ License: \tab GPL>=2\cr
 }
 \author{
 Prabhakar Chalise, Rama Raghavan, Brooke Fridley
-Maintainer: Rama Raghavan <rraghavan@kumc.edu>
-}
-\examples{
-prop <- c(0.30,0.40,0.30)
-effect <- 2.0
-InterSIM(n.sample=500,cluster.sample.prop=prop,delta.methyl=effect,delta.expr=effect,
-delta.protein=effect,p.DMP=0.2,p.DEG=NULL,p.DEP=NULL,do.plot=FALSE, sample.cluster=TRUE, 
-feature.cluster=TRUE)
+Maintainer: Rama Raghavan
 }
