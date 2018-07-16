@@ -7,10 +7,10 @@ InterSIM
 This function simulates three inter-related genomic datasets : DNA methylation, gene expression and protein expression.
 }
 \usage{
-InterSIM(n.sample=500, cluster.sample.prop=c(0.30,0.30,0.40), delta.methyl=5.0, 
-delta.expr=5.0, delta.protein=5.0, p.DMP=0.2,
+InterSIM(n.sample=500, cluster.sample.prop=c(0.30,0.30,0.40), delta.methyl=2.0,
+delta.expr=2.0, delta.protein=2.0, p.DMP=0.2,
 p.DEG=NULL, p.DEP=NULL, sigma.methyl=NULL, sigma.expr=NULL, sigma.protein=NULL,
-cor.methyl.expr=NULL, cor.expr.protein=NULL, do.plot=FALSE, sample.cluster=TRUE, 
+cor.methyl.expr=NULL, cor.expr.protein=NULL, do.plot=FALSE, sample.cluster=TRUE,
 feature.cluster=TRUE)
 }
 \arguments{
@@ -18,7 +18,7 @@ feature.cluster=TRUE)
 Number of subjects to simulate
 }
   \item{cluster.sample.prop}{
-Proportion of samples in the clusters. The number of proportions entered is used to determine the number of clusters in the 
+Proportion of samples in the clusters. The number of proportions entered is used to determine the number of clusters in the
 simulated data. e.g. if (0.3,0.4,0.3) is entered then the number of clusters will be 3.
 }
   \item{delta.methyl}{
@@ -40,31 +40,31 @@ proportion of DE mRNA, if NULL (default) mRNAs mapped by DE CpGs will be selecte
 proportion of DE protein, if NULL (default) proteins mapped by DE mRNAs will be selected
 }
   \item{sigma.methyl}{
-Covariance structure methylation data, if NULL precomputed values will be used.
+Covariance structure methylation data, if NULL (default) precomputed values will be used.
 "indep" gives covariance structure with diagonal elements only (Independent features)
 }
   \item{sigma.expr}{
-Covariance structure mRNA data, if NULL precomputed values will be used.
+Covariance structure mRNA data, if NULL (default) precomputed values will be used.
 "indep" gives covariance structure with diagonal elements only (Independent features)
 }
   \item{sigma.protein}{
-Covariance structure Protein data, if NULL precomputed values will be used.
+Covariance structure Protein data, if NULL (default) precomputed values will be used.
 "indep" gives covariance structure with diagonal elements only (Independent features)
 }
   \item{do.plot}{
 TRUE to generate heatmap, default is FALSE
 }
   \item{sample.cluster}{
-TRUE, if clustering should be done on samples
+TRUE (default), if clustering should be done on samples for heatmap. This option will be applicable only if do.plot=TRUE.
 }
   \item{feature.cluster}{
-TRUE, if clustering should be done on genomic features
+TRUE (default), if clustering should be done on genomic features for heatmap.This option will be applicable only if do.plot=TRUE.
 }
   \item{cor.methyl.expr}{
-Correlation between methylation and mRNA, if NULL precomputed values will be used
+Correlation between methylation and mRNA, if NULL (default) precomputed values will be used
 }
   \item{cor.expr.protein}{
-Correlation between mRNA and protein, if NULL precomputed values will be used
+Correlation between mRNA and protein, if NULL (default) precomputed values will be used
 }
 }
    \alias{CpG.gene.map.for.DEG}
@@ -82,18 +82,16 @@ Correlation between mRNA and protein, if NULL precomputed values will be used
    \alias{rev.logit}
    \alias{logit}
 \value{
-Function returns three datasets as matrices - DNA methylation, gene expression and protein expression. It also returns a vector that has true cluster assignment for each subject in the generated data.
+This function returns three datasets as matrices - DNA methylation, gene expression and protein expression. It also returns a vector that has true cluster assignment for each subject in the generated data.
 }
 \author{
 Prabhakar Chalise <pchalise@kumc.edu>, Rama Raghavan <rraghavan@kumc.edu>, Brooke Fridley <bfridley@kumc.edu>
 }
 \examples{
-
-## Example:
-
+#
 prop <- c(0.20,0.30,0.27,0.23)
-effect <- 2.5
-sim.data <- InterSIM(n.sample=500, cluster.sample.prop = c(0.30,0.30,0.40),
+effect <- 5
+sim.data <- InterSIM(n.sample=500, cluster.sample.prop = prop,
 delta.methyl=effect, delta.expr=effect, delta.protein=effect,
 p.DMP=0.2, p.DEG=NULL, p.DEP=NULL,
 sigma.methyl=NULL, sigma.expr=NULL, sigma.protein=NULL,

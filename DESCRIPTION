@@ -1,14 +1,15 @@
 Package: InterSIM
 Type: Package
 Title: Simulation of Inter-Related Genomic Datasets
-Version: 2.1
-Date: 2015-12-11
+Version: 2.2.0
+Date: 2018-07-13
 Author: Prabhakar Chalise, Rama Raghavan, Brooke Fridley
 Maintainer: Prabhakar Chalise <pchalise@kumc.edu>
 Description: Generates three inter-related genomic datasets : methylation, gene expression and protein expression.
 License: GPL
-Depends: R (>= 2.14), MASS, NMF, tools
+Depends: R (>= 3.5.0), MASS, NMF, tools
 NeedsCompilation: no
-Packaged: 2016-07-29 17:38:30 UTC; rama
+Packaged: 2018-07-13 22:20:16 UTC; pchalise
 Repository: CRAN
-Date/Publication: 2016-07-30 00:09:16
+RoxygenNote: 6.0.1
+Date/Publication: 2018-07-16 17:40:16 UTC
