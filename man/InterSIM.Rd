@@ -82,10 +82,13 @@ Correlation between mRNA and protein, if NULL (default) precomputed values will 
    \alias{rev.logit}
    \alias{logit}
 \value{
-This function returns three datasets as matrices - DNA methylation, gene expression and protein expression. It also returns a vector that has true cluster assignment for each subject in the generated data.
+This function returns three interrelated datasets having user specified cluster patterns as matrices - DNA methylation, gene expression and protein expression. It also returns a vector that has true cluster assignment for each subject in the generated data.
 }
 \author{
 Prabhakar Chalise <pchalise@kumc.edu>, Rama Raghavan <rraghavan@kumc.edu>, Brooke Fridley <bfridley@kumc.edu>
+}
+\references{
+Chalise P, Raghavan R and Fridley B (2016). InterSIM: Simulation tool for multiple integrative 'omic datasets. Computer Methods and Programs in Biomedicine, 128:69-74, https://doi.org/10.1016/j.cmpb.2016.02.011
 }
 \examples{
 #
@@ -100,5 +103,4 @@ do.plot=FALSE, sample.cluster=TRUE, feature.cluster=TRUE)
 sim.methyl <- sim.data$dat.methyl
 sim.expr <- sim.data$dat.expr
 sim.protein <- sim.data$dat.protein
-
 }

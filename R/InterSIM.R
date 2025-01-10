@@ -61,7 +61,7 @@ InterSIM <- function(n.sample=500,cluster.sample.prop=c(0.30,0.30,0.40),
 	n.cluster <- length(cluster.sample.prop) 			# Number of clusters
 	n.sample.in.cluster <- c(round(cluster.sample.prop[-n.cluster]*n.sample),
 						n.sample - sum(round(cluster.sample.prop[-n.cluster]*n.sample)))	# Number of samples in clusters
-	cluster.id <- do.call(c,sapply(1:n.cluster, function(x) rep(x,n.sample.in.cluster[x])))
+	cluster.id <- do.call(c,sapply(1:n.cluster, simplify = FALSE, function(x) rep(x,n.sample.in.cluster[x])))
 
 	#-----------------
 	# Methylation
@@ -126,7 +126,7 @@ InterSIM <- function(n.sample=500,cluster.sample.prop=c(0.30,0.30,0.40),
 	if (!is.null(p.DEP)){
 		DEP <- sapply(1:n.cluster,function(x) rbinom(n.protein, 1, prob = p.DEP))
 		rownames(DEP) <- names(mean.protein)
-	} else { DEP <- sapply(1:n.cluster,function(x){
+	} else { DEP <- sapply(1:n.cluster, function(x){
 			 gene.name <- rownames(subset(DEG,DEG[,x]==1))
 			 protein.name <- rownames(protein.gene.map.for.DEP[protein.gene.map.for.DEP$gene %in% gene.name,])
 			 as.numeric(names(mean.protein) %in% protein.name)})

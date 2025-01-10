@@ -1,7 +1,7 @@
-5cf28ca9c56208e2a9ab25f81d42fa59 *DESCRIPTION
+5c5d5e82d91a224929b1440cd39ed63e *DESCRIPTION
 a5864a8ed1d3ed5f4545163676f14080 *NAMESPACE
 6b37c86221bc798767553391f0e65fca *R/InterSIM-internal.R
-aa156fba31b1b89fd537e0feb63371da *R/InterSIM.R
+90b3af1f146c08570f192de7ba00efb3 *R/InterSIM.R
 927a067bc860cf0f374364559cc74c8e *R/logit.R
 563af0efbcd48e94d93e5ad2a173ece3 *R/rev.logit.R
 b1962b6d29553761740a9e433b16b5de *data/CpG.gene.map.for.DEG.rda
@@ -17,5 +17,5 @@ e237490e09988ccc243d621389c4de8a *data/mean.protein.rda
 9fca2e41070c7e2488c7d08d763367d3 *data/protein.gene.map.for.DEP.rda
 419d4ad3f471565a7218ef6f308d2a3a *data/rho.expr.protein.rda
 f10485afb2688c2bbfd9a6d21865386f *data/rho.methyl.expr.rda
-a409375ff2c3d233b380cb1dc78ee0c6 *man/InterSIM-package.Rd
-c5ed778180e70d9efb541c17dfd371cb *man/InterSIM.Rd
+b27f94c3c3396905b4c99bd803c7c737 *man/InterSIM-package.Rd
+096a24c2b7b7bd46452fc8847e5df3d9 *man/InterSIM.Rd
